@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&display=swap');
 /*
 # Front-end Style Guide
 
@@ -53,39 +54,125 @@ Use transparency to get the colour variations necessary to match the design. Hin
 *{
     margin:0;
 }
+body{
+    font-family: 'Hanken Grotesk', sans-serif;
+}
 
+    /* Colors and Fonts */
 :root{
     
    /* ### Primary*/
---Light-red: hsl(0, 100%, 67%);
---Orangey-yellow: hsl(39, 100%, 56%);
---Green-teal: hsl(166, 100%, 37%);
---Cobalt-blue: hsl(234, 85%, 45%);
+--light-red: hsl(0, 100%, 67%);
+--orangey-yellow: hsl(39, 100%, 56%);
+--green-teal: hsl(166, 100%, 37%);
+--cobalt-blue: hsl(234, 85%, 45%);
 /*## Gradients*/
---Light-slate-blue /*(background)*/: hsl(252, 100%, 67%);
---Light-royal-blue /*(background)*/: hsl(241, 81%, 54%);
---Violet-blue /*(circle)*/: hsla(256, 72%, 46%, 1);
---Persian-blue /*(circle)*/: hsla(241, 72%, 46%, 0);
+--light-slate-blue /*(background)*/: hsl(252, 100%, 67%);
+--light-royal-blue /*(background)*/: hsl(241, 81%, 54%);
+--violet-blue /*(circle)*/: hsla(256, 72%, 46%, 1);
+--persian-blue /*(circle)*/: hsla(241, 72%, 46%, 0);
 /*### Neutral*/
---White: hsl(0, 0%, 100%);
---Pale-blue: hsl(221, 100%, 96%);
---Light-lavender: hsl(241, 100%, 89%);
---Dark-gray-blue: hsl(224, 30%, 27%);
+--white: hsl(0, 0%, 100%);
+--pale-blue: hsl(221, 100%, 96%);
+--light-lavender: hsl(241, 100%, 89%);
+--dark-gray-blue: hsl(224, 30%, 27%);
+--hanken-bold:800;
+--hanken-medium:500;
+--hanken-semi-bold:700;
+--hanken-regular:400;
 
 }
 
 @media(max-width:414px){
+
+    /* Your result section */
     #result{
         display:flex;
         flex-direction:column;
-        background-color:var(--Light-slate-blue);
+        border-bottom-left-radius: 1.5em;
+        border-bottom-right-radius: 1.5em;
+        align-items: center;
+        background: linear-gradient(var(--light-slate-blue), 40% , var(--light-royal-blue));
+        gap:1em;
+        padding: 1em;
+    }
+    /* Result Section Circle*/
+    #circle{
+        width: 7.5em;
+        height: 7.5em;
+        background: linear-gradient(var(--violet-blue), var(--persian-blue));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        
     }
 
+    #circle h1{
+        color: var(--white);
+        font-size: 3em;
+    }
+
+    #circle h1 p{
+        color: var(--light-lavender);
+        font-size: 0.5em;
+        display: inline-block;
+        font-weight: var(--hanken-medium);
+    }
+
+
     #result div{
-        background-color: var(--Light-royal-blue);
+        background-color: var(--light-royal-blue);
         border-radius: 50%;
     }
+    #result h3{
+        color:var(--light-lavender);
+    }
+    #result h2{
+        color: var(--white);
+    }
+    #result p{
+        color: var(--light-lavender);
+    }
+
+    /* Summary Section*/
+    #summary{
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        gap: 1em;
+        
+    }
+    
+    #stats{
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    
+    #reaction{
+        
+        color: var(--light-red);
 }
+
+    #memory{}
+
+    #verbal{}
+
+    #visual{}
+
+    #continue-btn{
+        background-color: var(--dark-gray-blue);
+        border-radius: 1em;
+        color:var(--white);
+        font-weight: var(--hanken-semi-bold);
+        font-size: 1em;
+    }
+}
+
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
