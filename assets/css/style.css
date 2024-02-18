@@ -94,6 +94,150 @@ body{
         align-items: center;
         background: linear-gradient(var(--light-slate-blue), 40% , var(--light-royal-blue));
         gap:1em;
+        padding: 3.5em;
+    }
+    /* Result Section Circle*/
+    #circle{
+        width: 7.5em;
+        height: 7.5em;
+        background: linear-gradient(var(--violet-blue), var(--persian-blue));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        
+    }
+
+    #circle h1{
+        color: var(--white);
+        font-size: 3em;
+    }
+
+    #circle h1 p{
+        color: var(--light-lavender);
+        font-size: 0.5em;
+        display: inline-block;
+        font-weight: var(--hanken-medium);
+    }
+
+
+    #result div{
+        background-color: var(--light-royal-blue);
+        border-radius: 50%;
+    }
+    #result h3{
+        color:var(--light-lavender);
+    }
+    #result h2{
+        color: var(--white);
+    }
+    #result p{
+        color: var(--light-lavender);
+    }
+
+    /* Summary Section*/
+    #summary{
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        gap: 1em;
+        
+    }
+    
+    #stats{
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    
+    #reaction{
+        color: var(--light-red);
+        background-color: hsla(0,100%, 98%);
+        padding: 1em;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        
+}
+#reaction span:first-of-type, #memory span:first-of-type{
+    margin-right:7em;
+    
+}
+#verbal span:first-of-type, #visual span:first-of-type{
+    margin-right:8em;
+}
+    #reaction span:last-child{
+        color: rgba(8, 8, 8, 0.726);
+        font-weight: var(--hanken-semi-bold);
+    }
+    #memory{
+        color: var(--orangey-yellow);
+        background-color: hsl(39, 100%, 95%);
+        padding: 1em;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+    }
+    #memory span:last-child{
+        color: rgba(8, 8, 8, 0.726);
+        font-weight: var(--hanken-semi-bold);
+        
+        
+    }
+    #verbal{
+        color: var(--green-teal);
+        background-color: hsl(166, 100%, 95%);
+        padding: 1em;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+    }
+
+    #verbal span:last-child{
+        color: rgba(8, 8, 8, 0.726);
+        font-weight: var(--hanken-semi-bold);
+    }
+    #visual{
+        color: var(--cobalt-blue);
+        background-color: hsl(234, 85%, 97%);
+        padding: 1em;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+    }
+    #visual span:last-child{
+        color: rgba(8, 8, 8, 0.726);
+        font-weight: var(--hanken-semi-bold);
+    }
+
+    #continue-btn{
+        background-color: var(--dark-gray-blue);
+        border-radius: 30px;
+        color:var(--white);
+        font-weight: var(--hanken-semi-bold);
+        font-size: 1em;
+        padding: 1em;
+        cursor: pointer;
+    }
+}
+
+@media(min-width:415px){
+     /* Your result section */
+     #result{
+        display:flex;
+        flex-direction:column;
+        border-bottom-left-radius: 1.5em;
+        border-bottom-right-radius: 1.5em;
+        align-items: center;
+        background: linear-gradient(var(--light-slate-blue), 40% , var(--light-royal-blue));
+        gap:1em;
         padding: 1em;
     }
     /* Result Section Circle*/
@@ -164,7 +308,11 @@ body{
         
 }
 #reaction span:first-of-type, #memory span:first-of-type{
-    margin-right: 2em;
+    margin-right:7em;
+    
+}
+#verbal span:first-of-type, #visual span:first-of-type{
+    margin-right:8em;
 }
     #reaction span:last-child{
         color: rgba(8, 8, 8, 0.726);
@@ -223,7 +371,6 @@ body{
         cursor: pointer;
     }
 }
-
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

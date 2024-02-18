@@ -53,7 +53,12 @@ spans.forEach((span,index) => {
     if(span[index1].innerHTML === ''){
 
       span[0].innerHTML = categories[index];
-      span[1].innerHTML = `${scores[index]} <span style="display:inline-block;color: rgb(168, 158, 158);"> /100 </span>`;
+      span[1].innerHTML = `${scores[index]}`;
+      let sp = document.createElement('span')
+      sp.append('/100');
+      span[1].append(sp)
+      console.log(sp.style)
+      sp.style.cssText = 'color: rgb(150, 141, 141);';
     }
 
    
