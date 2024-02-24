@@ -330,7 +330,13 @@ body {
         border-radius: 10px;
         display: flex;
         justify-content: space-between;
+        
 
+    }
+
+    #reaction p {
+        display: flex;
+        gap: 1em;
     }
 
     #reaction p:last-of-type {
@@ -349,6 +355,8 @@ body {
         border-radius: 10px;
         display: flex;
         justify-content: space-between;
+        gap: 1em;
+        align-items: center;
     }
 
     #memory p:last-of-type {
@@ -360,6 +368,11 @@ body {
         font-weight: var(--hanken-semi-bold);
     }
 
+    #memory p {
+        display: flex;
+        gap: 1em;
+    }
+
     #verbal {
         color: var(--green-teal);
         background-color: hsl(166, 100%, 95%);
@@ -367,6 +380,7 @@ body {
         border-radius: 10px;
         display: flex;
         justify-content: space-between;
+        gap: 1em;
     }
 
     #verbal p:last-of-type {
@@ -378,6 +392,10 @@ body {
         font-weight: var(--hanken-semi-bold);
     }
 
+    #verbal p {
+        display: flex;
+        gap: 1em;
+    }
     #visual {
         color: var(--cobalt-blue);
         background-color: hsl(234, 85%, 97%);
@@ -385,6 +403,7 @@ body {
         border-radius: 10px;
         display: flex;
         justify-content: space-between;
+        gap: 1em;
     }
 
     #visual p:last-of-type {
@@ -394,6 +413,11 @@ body {
     #visual p:last-of-type span {
         color: rgba(8, 8, 8, 0.726);
         font-weight: var(--hanken-semi-bold);
+    }
+
+    #visual p {
+        display: flex;
+        gap: 1em;
     }
 
     #continue-btn {

@@ -8,76 +8,63 @@ let jsonData = async () => {
 }
 
 let jsonToObject = async () => {
-  let statParagraphs = document.querySelectorAll('div#stats > p');
 
-  let objeto = await jsonData();
-  /**array with the images of the paragraphs */
-  let imgs = [];
-  statParagraphs.forEach(paragraph => imgs.push(paragraph.querySelector('img')));
-
-  /**array with the image reference */
-  let imgSrc = []
-  objeto.forEach(element => imgSrc.push(element.icon));
-
-  /**Pair up img element with img src in a single array */
-  let icons = []
+  let stats = await jsonData();
+  let statParagraphs = document.querySelectorAll('#stats div p');
 
 
-  /**adding categories to array */
+  //assigning json object values to arrays to iterate later.
+  let icons = [];
   let categories = [];
-  objeto.forEach(element => categories.push(element.category));
+  let scores = [];
 
-  /**assigning score results into an array */
-  let scores = []
-  objeto.forEach(element => scores.push(element.score));
+  //assigning html elements to arrays
+  let iconElements = [];
+  let categoryElements = [];
+  let scoreElements = [];
 
-  /**seleccionar primer parrafo en el array que guarda los parrafos */
-
-  let reactionSpans = statParagraphs[0].querySelectorAll(`p > span`);
-  let spans = [];
-  /** */
-
-  statParagraphs.forEach(paragraph => {
-    //populating spans array with pairs of spans from each paragraph
-    spans.push(paragraph.querySelectorAll('p span'));
-  })
-
-spans[1][0].innerHTML 
-
-
-spans.forEach((span,index) => {
-
- 
-  span.forEach((spa, index1)=>{
-
-    if(span[index1].innerHTML === ''){
-
-      span[0].innerHTML = categories[index];
-      span[1].innerHTML = `${scores[index]}`;
-      let sp = document.createElement('span')
-      sp.append('/100');
-      span[1].append(sp)
-      console.log(sp.style)
-      sp.style.cssText = 'color: rgb(150, 141, 141);';
-    }
-
-   
-    
-  })
-    
-})
-
-  //add images
-  for (let i in imgs) {
-    imgs[i].setAttribute('src', imgSrc[i]);
+  for(let stat of stats){
+    icons.push(stat.icon);
+    categories.push(stat.category);
+    scores.push(stat.score);
   }
+  console.log(icons,categories,scores);
 
- 
+  //paragraph elements
+  let elements = []
+  for(let element of statParagraphs){ 
+    elements.push(element.childNodes);
+  }
+  
+  
+  for(let element in elements){ 
+    if(element % 2 === 0){
+      iconElements.push(elements[element][0]);
+      categoryElements.push (elements[element][1]);
+    }else if (element % 2 === 1){
+      scoreElements.push(elements[element][0]);
+  }
+  
 }
+  console.log(iconElements);
+  console.log(scoreElements);
+  console.log(categoryElements);
 
+  for(let i in icons){
+    iconElements[i].setAttribute('src', icons[i]);
+    categoryElements[i].innerHTML = categories[i];
+    scoreElements[i].innerHTML = scores[i];
+    
+  }
+  
+  //result
+let total = 0;
+  for(let result of scores){
+    total += result;
+  }
+  total = Math.round(total/scores.length)
+  document.querySelector('#result h1').innerHTML = total
+
+
+}
 jsonToObject();
-
-
-
-
-
