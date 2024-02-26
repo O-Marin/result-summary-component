@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&display=swap');
 
+html {
+    height: 100%;
+}
+
 /*
 # Front-end Style Guide
 
@@ -58,6 +62,7 @@ Use transparency to get the colour variations necessary to match the design. Hin
 
 body {
     font-family: 'Hanken Grotesk', sans-serif;
+    height: 100%;
 }
 
 /* Colors and Fonts */
@@ -93,7 +98,8 @@ body {
 
 }
 
-@media(max-width:719px) {
+@media(max-width:842px) {
+
 
     /* Your result section */
     #result {
@@ -105,20 +111,21 @@ body {
         background: linear-gradient(var(--light-slate-blue), 40%, var(--light-royal-blue));
         gap: 1em;
         padding: 3.5em;
+        flex-grow: 1;
     }
 
     /* Result Section Circle*/
     #circle {
         width: 7.5em;
         height: 7.5em;
-        background: linear-gradient(var(--violet-blue), var(--persian-blue));
+        background: linear-gradient(var(--violet-blue) ,var(--persian-blue));
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-
-
+        margin: 1em 0;
+        padding: 0.5em;
     }
 
     #circle h1 {
@@ -174,180 +181,28 @@ body {
         border-radius: 10px;
         display: flex;
         justify-content: space-between;
+    
+    
     }
-
-    #reaction p:last-of-type {
-        color: black;
-    }
-
-    #reaction p:last-of-type span {
-        color: rgba(8, 8, 8, 0.726);
-        font-weight: var(--hanken-semi-bold);
-    }
-
-    #memory {
-        color: var(--orangey-yellow);
-        background-color: hsl(39, 100%, 95%);
-        padding: 1em;
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    #memory p:last-of-type {
-        color: black;
-    }
-
-    #memory p:last-of-type span {
-        color: rgba(8, 8, 8, 0.726);
-        font-weight: var(--hanken-semi-bold);
-    }
-
-    #verbal {
-        color: var(--green-teal);
-        background-color: hsl(166, 100%, 95%);
-        padding: 1em;
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    #verbal p:last-of-type {
-        color: black;
-    }
-
-    #verbal p:last-of-type span {
-        color: rgba(8, 8, 8, 0.726);
-        font-weight: var(--hanken-semi-bold);
-    }
-
-    #visual {
-        color: var(--cobalt-blue);
-        background-color: hsl(234, 85%, 97%);
-        padding: 1em;
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    #visual p:last-of-type {
-        color: black;
-    }
-
-    #visual p:last-of-type span {
-        color: rgba(8, 8, 8, 0.726);
-        font-weight: var(--hanken-semi-bold);
-    }
-    #continue-btn {
-        background-color: var(--dark-gray-blue);
-        border-radius: 30px;
-        color: var(--white);
-        font-weight: var(--hanken-semi-bold);
-        font-size: 1em;
-        padding: 1em;
-        cursor: pointer;
-    }
-}
-
-@media(min-width:720px) {
-
-    /* Your result section */
-    #result {
-        display: flex;
-        flex-direction: column;
-        border-bottom-left-radius: 1.5em;
-        border-bottom-right-radius: 1.5em;
-        align-items: center;
-        background: linear-gradient(var(--light-slate-blue), 40%, var(--light-royal-blue));
-        gap: 1em;
-        padding: 1em;
-    }
-
-    /* Result Section Circle*/
-    #circle {
-        width: 7.5em;
-        height: 7.5em;
-        background: linear-gradient(var(--violet-blue), var(--persian-blue));
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-
-
-    }
-
-    #circle h1 {
-        color: var(--white);
-        font-size: 3em;
-    }
-
-    #circle h1 p {
-        color: var(--light-lavender);
-        font-size: 0.5em;
-        display: inline-block;
-        font-weight: var(--hanken-medium);
-    }
-
-
-    #result div {
-        background-color: var(--light-royal-blue);
-        border-radius: 50%;
-    }
-
-    #result h3 {
-        color: var(--light-lavender);
-    }
-
-    #result h2 {
-        color: var(--white);
-    }
-
-    #result p {
-        color: var(--light-lavender);
-    }
-
-    /* Summary Section*/
-    #summary {
-        display: flex;
-        flex-direction: column;
-        padding: 1em;
-        gap: 1em;
-
-    }
-
-    #stats {
-        padding: 1em;
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-    }
-
-    #reaction {
-        color: var(--light-red);
-        background-color: hsla(0, 100%, 98%);
-        padding: 1em;
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-between;
-        
-
-    }
-
+    
     #reaction p {
         display: flex;
         gap: 1em;
+        
     }
-
-    #reaction p:last-of-type {
-        color: black;
+    
+    #reaction p:last-of-type span:first-child{
+        color: rgb(54, 54, 54);
+        font-weight: var(--hanken-bold);
+        
+    }    
+    
+    #reaction p:last-of-type span:last-child{
+        color: rgba(95, 94, 94, 0.726);
+        font-weight: var(--hanken-bold);
+        margin-left: -10px;
     }
-
-    #reaction p:last-of-type span {
-        color: rgba(8, 8, 8, 0.726);
-        font-weight: var(--hanken-semi-bold);
-    }
-
+    
     #memory {
         color: var(--orangey-yellow);
         background-color: hsl(39, 100%, 95%);
@@ -358,21 +213,23 @@ body {
         gap: 1em;
         align-items: center;
     }
-
+    
     #memory p:last-of-type {
-        color: black;
+        color: rgb(54, 54, 54);
+        font-weight: var(--hanken-bold);
     }
-
-    #memory p:last-of-type span {
-        color: rgba(8, 8, 8, 0.726);
+    
+    #memory p:last-of-type span:last-child {
+        color: rgba(95, 94, 94, 0.726);
         font-weight: var(--hanken-semi-bold);
+        margin-left: -10px;
     }
-
+    
     #memory p {
         display: flex;
         gap: 1em;
     }
-
+    
     #verbal {
         color: var(--green-teal);
         background-color: hsl(166, 100%, 95%);
@@ -382,20 +239,23 @@ body {
         justify-content: space-between;
         gap: 1em;
     }
-
+    
     #verbal p:last-of-type {
-        color: black;
+        color: rgb(54, 54, 54);
+        font-weight: var(--hanken-bold);
     }
-
-    #verbal p:last-of-type span {
-        color: rgba(8, 8, 8, 0.726);
+    
+    #verbal p:last-of-type span:last-child {
+        color: rgba(95, 94, 94, 0.726);
         font-weight: var(--hanken-semi-bold);
+        margin-left: -10px;
     }
-
+    
     #verbal p {
         display: flex;
         gap: 1em;
     }
+    
     #visual {
         color: var(--cobalt-blue);
         background-color: hsl(234, 85%, 97%);
@@ -405,16 +265,18 @@ body {
         justify-content: space-between;
         gap: 1em;
     }
-
+    
     #visual p:last-of-type {
-        color: black;
+        color: rgb(54, 54, 54);
+        font-weight: var(--hanken-bold);
     }
-
-    #visual p:last-of-type span {
-        color: rgba(8, 8, 8, 0.726);
+    
+    #visual p:last-of-type span:last-child {
+        color: rgba(95, 94, 94, 0.726);
         font-weight: var(--hanken-semi-bold);
+        margin-left: -10px;
     }
-
+    
     #visual p {
         display: flex;
         gap: 1em;
@@ -429,11 +291,256 @@ body {
         padding: 1em;
         cursor: pointer;
     }
+
+    #continue-btn:hover {
+        background: linear-gradient(var(--light-slate-blue), 40%, var(--light-royal-blue));
+        cursor: pointer;
+    }
+
+
+}
+
+@media(min-width:843px) {
+    body {
+        padding: 5em 0;
+    }
+
+    main {
+        
+        display: flex;
+        justify-content: center;
+    }
+
+
+#desktop {
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    width:45em;
+    border-radius: 1.5em;
+}
+
+/* Your result section */
+
+#result {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5em;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(var(--light-slate-blue), 40%, var(--light-royal-blue));
+    gap:1em;
+    padding: 1em;
+    flex: 0 1 auto;
+    width: 20em;
+    
+}
+
+
+/* Result Section Circle*/
+#circle {
+    width: 8.5em;
+    height: 8.5em;
+    background: linear-gradient(var(--violet-blue), var(--persian-blue));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.5em;
+
+}
+
+#circle h1 {
+    color: var(--white);
+    font-size: 3em;
+}
+
+#circle h1 p {
+    color: var(--light-lavender);
+    font-size: 0.5em;
+    display: inline-block;
+    font-weight: var(--hanken-medium);
+}
+
+
+#result div {
+    background-color: var(--light-royal-blue);
+    border-radius: 50%;
+}
+
+#result h3 {
+    color: var(--light-lavender);
+    
+}
+
+#result h2 {
+    color: var(--white);
+    margin-top: 1em;
+}
+
+#result p {
+    color: var(--light-lavender);
+}
+#description {
+    text-align:justify;  
+    text-justify:initial;
+    width: 14em;
+    text-align: center;
+}
+
+
+/* Summary Section*/
+#summary {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 1em;
+    flex: 0 1 auto;
+    width: 20em;
+    
+    
+
+    
+}
+
+#stats {
+    padding-right: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    margin-bottom: 1em;
+}
+#reaction {
+    color: var(--light-red);
+    background-color: hsla(0, 100%, 98%);
+    padding: 1em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+#reaction p {
+    display: flex;
+    gap: 1em;
+    
+}
+
+#reaction p:last-of-type span:first-child{
+    color: rgb(54, 54, 54);
+    font-weight: var(--hanken-bold);
+    
+}    
+
+#reaction p:last-of-type span:last-child{
+    color: rgba(95, 94, 94, 0.726);
+    font-weight: var(--hanken-bold);
+    margin-left: -10px;
+}
+
+#memory {
+    color: var(--orangey-yellow);
+    background-color: hsl(39, 100%, 95%);
+    padding: 1em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    align-items: center;
+
+}
+
+#memory p:last-of-type {
+    color: rgb(54, 54, 54);
+    font-weight: var(--hanken-bold);
+}
+
+#memory p:last-of-type span:last-child {
+    color: rgba(95, 94, 94, 0.726);
+    font-weight: var(--hanken-semi-bold);
+    margin-left: -10px;
+}
+
+#memory p {
+    display: flex;
+    gap: 1em;
+}
+
+#verbal {
+    color: var(--green-teal);
+    background-color: hsl(166, 100%, 95%);
+    padding: 1em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+#verbal p:last-of-type {
+    color: rgb(54, 54, 54);
+    font-weight: var(--hanken-bold);
+}
+
+#verbal p:last-of-type span:last-child {
+    color: rgba(95, 94, 94, 0.726);
+    font-weight: var(--hanken-semi-bold);
+    margin-left: -10px;
+}
+
+#verbal p {
+    display: flex;
+    gap: 1em;
+}
+
+#visual {
+    color: var(--cobalt-blue);
+    background-color: hsl(234, 85%, 97%);
+    padding: 1em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+#visual p:last-of-type {
+    color: rgb(54, 54, 54);
+    font-weight: var(--hanken-bold);
+}
+
+#visual p:last-of-type span:last-child {
+    color: rgba(95, 94, 94, 0.726);
+    font-weight: var(--hanken-semi-bold);
+    margin-left: -10px;
+}
+
+#visual p {
+    display: flex;
+    gap: 1em;
+}
+
+#continue-btn {
+    background-color: var(--dark-gray-blue);
+    border-radius: 30px;
+    color: var(--white);
+    font-weight: var(--hanken-semi-bold);
+    font-size: 1em;
+    padding: 1em;
+    cursor: pointer;
+}
+
+#continue-btn:hover {
+    background: linear-gradient(var(--light-slate-blue), 40%, var(--light-royal-blue));
+    cursor: pointer;
+}
 }
 
 .attribution {
     font-size: 11px;
     text-align: center;
+    margin-top: 1em;
 }
 
 .attribution a {
