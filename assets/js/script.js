@@ -1,5 +1,5 @@
 let jsonData = async () => {
-  let test = await fetch("https://github.com/O-Marin/result-summary-component/blob/main/data.json")
+  let test = await fetch("https://raw.githubusercontent.com/O-Marin/result-summary-component/main/data.json")
     .then((response) => response.json())
     .then((test) => {
       return test;
