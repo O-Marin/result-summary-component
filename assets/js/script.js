@@ -26,7 +26,6 @@ let jsonToObject = async () => {
     categories.push(stat.category);
     scores.push(stat.score);
   }
-  console.log(icons, categories, scores);
 
   //paragraph elements
   let elements = [];
@@ -42,9 +41,7 @@ let jsonToObject = async () => {
       scoreElements.push(elements[element][0]);
     }
   }
-  console.log(iconElements);
-  console.log(scoreElements);
-  console.log(categoryElements);
+
 
   for (let i in icons) {
     iconElements[i].setAttribute("src", icons[i]);
